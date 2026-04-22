@@ -3,40 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Portfolio | Professional</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Dilmurod | AI Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #111; line-height: 1.6; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fcfcfc; color: #1a1a1a; line-height: 1.6; }
         
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
         
-        header { padding: 100px 0 50px; text-align: center; }
-        header h1 { font-size: 3rem; font-weight: 600; letter-spacing: -1px; margin-bottom: 10px; }
-        header p { font-size: 1.2rem; color: #666; }
+        header { padding: 120px 0 80px; text-align: left; }
+        header h1 { font-size: 4rem; font-weight: 800; letter-spacing: -2px; line-height: 1; margin-bottom: 20px; }
+        header p { font-size: 1.5rem; color: #555; max-width: 600px; }
 
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 40px; padding: 50px 0; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px; padding-bottom: 100px; }
         
-        .project-card { border-radius: 12px; overflow: hidden; background: #f9f9f9; transition: transform 0.3s ease; border: 1px solid #eee; }
-        .project-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .project-card { border-radius: 24px; overflow: hidden; background: #fff; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .project-card:hover { transform: translateY(-15px); box-shadow: 0 40px 80px rgba(0,0,0,0.1); }
         
-        .project-media { width: 100%; height: 300px; object-fit: cover; display: block; border-bottom: 1px solid #eee; }
+        .project-media { width: 100%; height: 400px; object-fit: cover; display: block; background: #eee; }
         
-        .project-info { padding: 30px; }
-        .project-info span { font-size: 0.8rem; text-transform: uppercase; color: #999; font-weight: 600; letter-spacing: 1px; }
-        .project-info h2 { margin: 10px 0; font-size: 1.5rem; }
-        .project-info p { color: #555; margin-bottom: 20px; }
+        .project-info { padding: 40px; }
+        .project-info .category { font-size: 0.9rem; text-transform: uppercase; color: #007aff; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 10px; display: block; }
+        .project-info h2 { font-size: 2rem; margin-bottom: 15px; font-weight: 700; }
+        .project-info p { color: #666; font-size: 1.1rem; margin-bottom: 25px; }
         
-        .btn-link { text-decoration: none; color: #000; font-weight: 600; border-bottom: 2px solid #000; padding-bottom: 2px; transition: 0.2s; }
-        .btn-link:hover { color: #666; border-color: #666; }
+        .view-btn { display: inline-block; text-decoration: none; background: #1a1a1a; color: #fff; padding: 15px 35px; border-radius: 50px; font-weight: 600; transition: 0.3s; }
+        .view-btn:hover { background: #444; transform: scale(1.05); }
 
-        footer { padding: 100px 0; text-align: center; border-top: 1px solid #eee; margin-top: 50px; }
-        .contact-btn { background: #000; color: #fff; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; }
-        .contact-btn:hover { background: #333; }
+        .audio-section { background: #000; color: #fff; padding: 60px; border-radius: 24px; text-align: center; grid-column: span 2; margin-top: 20px; }
+        audio { width: 100%; max-width: 600px; margin-top: 30px; border-radius: 10px; }
 
-        @media (max-width: 600px) {
+        footer { padding: 100px 0; text-align: center; border-top: 1px solid #eee; }
+        .contact-large { font-size: 3rem; font-weight: 800; text-decoration: none; color: #000; transition: 0.3s; }
+        .contact-large:hover { color: #007aff; }
+
+        @media (max-width: 900px) {
             .portfolio-grid { grid-template-columns: 1fr; }
-            header h1 { font-size: 2rem; }
+            header h1 { font-size: 2.5rem; }
+            .audio-section { grid-column: span 1; }
         }
     </style>
 </head>
@@ -44,65 +48,67 @@
 
     <div class="container">
         <header>
-            <h1>DILMUROD</h1>
-            <p>Prompt Engineer | Web Developer | AI Artist</p>
+            <h1>DILMUROD <span style="color: #007aff;">.</span></h1>
+            <p>Sun'iy intellekt muhandisi va zamonaviy raqamli yechimlar yaratuvchisi.</p>
         </header>
 
         <section class="portfolio-grid">
             
             <div class="project-card">
-                <video class="project-media" autoplay muted loop>
+                <video class="project-media" autoplay muted loop playsinline>
                     <source src="NRG.mp4" type="video/mp4">
                 </video>
                 <div class="project-info">
-                    <span>Architecture Visualization</span>
-                    <h2>NRG Timelapse Project</h2>
-                    <p>AI yordamida qayta ishlangan yuqori sifatli qurilish jarayoni videosi.</p>
-                    <a href="NRG.mp4" class="btn-link">Videoni ko'rish</a>
+                    <span class="category">Video & Architecture</span>
+                    <h2>NRG Timelapse</h2>
+                    <p>Qurilish jarayonining yuqori aniqlikdagi AI vizualizatsiyasi.</p>
+                    <a href="NRG.mp4" class="view-btn">Tomosha qilish</a>
                 </div>
             </div>
 
             <div class="project-card">
                 <img src="kiyim dokoni uchun.jpg" class="project-media">
                 <div class="project-info">
-                    <span>AI Fashion</span>
-                    <h2>Realistic Brand Models</h2>
-                    <p>Kiyim do'konlari uchun generativ sun'iy intellekt orqali yaratilgan modellar.</p>
-                    <a href="#" class="btn-link">Loyiha tafsiloti</a>
+                    <span class="category">AI Photography</span>
+                    <h2>Brand Models</h2>
+                    <p>Realistik modellar yaratish orqali brendlar uchun foto-kontent yaratish.</p>
                 </div>
             </div>
 
             <div class="project-card">
                 <img src="Medzone.png" class="project-media">
                 <div class="project-info">
-                    <span>Web Development</span>
-                    <h2>Medzone Healthcare</h2>
-                    <p>Klinikalar uchun mo'ljallangan zamonaviy va funksional veb-interfeys.</p>
-                    <a href="https://drdili1987-oss.github.io/Medzone/" class="btn-link">Saytga o'tish</a>
+                    <span class="category">Development</span>
+                    <h2>Medzone Platform</h2>
+                    <p>Tibbiyot klinikasi uchun yaratilgan zamonaviy korporativ veb-sayt.</p>
+                    <a href="https://drdili1987-oss.github.io/Medzone/" class="view-btn">Saytga o'tish</a>
                 </div>
             </div>
 
             <div class="project-card">
-                <div style="padding: 40px; background: #000; color: #fff; height: 300px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
-                    <h3 style="font-size: 1.5rem;">SUNO AUDIO</h3>
-                    <audio controls style="margin-top: 20px; width: 100%;">
-                        <source src="suno dagi xamma musiqalarim.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
+                <img src="Bayanul Lisan.png" class="project-media">
                 <div class="project-info">
-                    <span>AI Sound Design</span>
-                    <h2>Neural Remix Collection</h2>
-                    <p>Suno AI yordamida yaratilgan 20 dan ortiq musiqiy kompozitsiyalar.</p>
-                    <a href="https://t.me/drdili" class="btn-link">Telegram kanal</a>
+                    <span class="category">Education</span>
+                    <h2>Bayanul Lisan</h2>
+                    <p>Arab tilini o'rganish uchun mo'ljallangan innovatsion platforma.</p>
                 </div>
+            </div>
+
+            <div class="audio-section">
+                <span class="category" style="color: #007aff;">Sound Design</span>
+                <h2 style="font-size: 2.5rem; margin-top: 10px;">Suno AI Remix Archive</h2>
+                <p style="color: #aaa; margin-top: 10px;">20 dan ortiq mualliflik cover va remix musiqalari.</p>
+                <audio controls>
+                    <source src="suno dagi xamma musiqalarim.mp3" type="audio/mpeg">
+                </audio>
             </div>
 
         </section>
 
         <footer>
-            <h2 style="margin-bottom: 30px;">Loyiha taklifingiz bormi?</h2>
-            <a href="https://t.me/drdili" class="contact-btn">Men bilan bog'lanish</a>
-        </footer >
+            <p style="margin-bottom: 20px; color: #888;">Loyihalar bo'yicha bog'lanish:</p>
+            <a href="https://t.me/drdili" class="contact-large">Telegram orqali yozing</a>
+        </footer>
     </div>
 
 </body>
