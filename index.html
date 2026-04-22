@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Creator | Cyber Portfolio</title>
+    <style>
+        :root {
+            --neon-green: #00ff41;
+            --neon-pink: #ff00ff;
+            --neon-blue: #00f3ff;
+            --dark-bg: #0a0a0a;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--neon-green);
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .header {
+            text-align: center;
+            border: 2px solid var(--neon-green);
+            padding: 20px;
+            box-shadow: 0 0 15px var(--neon-green);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .glitch {
+            font-size: 2.5rem;
+            font-weight: bold;
+            position: relative;
+            text-shadow: 2px 2px var(--neon-pink);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid var(--neon-blue);
+            padding: 15px;
+            background: rgba(0, 243, 255, 0.05);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 20px var(--neon-blue);
+            transform: scale(1.02);
+        }
+
+        .card h2 {
+            color: var(--neon-pink);
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .status {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            border: 1px solid var(--neon-green);
+            color: var(--neon-green);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background: var(--neon-green);
+            color: black;
+        }
+
+        /* Scanline effect */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="glitch">AI Creator: DRDILI</div>
+        <p>> STATUS: SYSTEM ONLINE_</p>
+    </div>
+
+    <div class="grid-container">
+        <div class="card">
+            <div class="status">PROJECT_TYPE: ARCHITECTURE_TIMELAPSE</div>
+            <h2>NRG BUILDING CONSTRUCTION</h2>
+            <p>AI-enhanced industrial visualization of city growth.</p>
+            <a href="#" class="btn">VIEW_DATA</a>
+        </div>
+
+        <div class="card" style="border-color: var(--neon-pink);">
+            <div class="status">PROJECT_TYPE: DIGITAL_HUMANS</div>
+            <h2>NEO-RETAIL MODELS</h2>
+            <p>Hyper-realistic AI models for apparel brands.</p>
+            <a href="#" class="btn" style="border-color: var(--neon-pink); color: var(--neon-pink);">ACCESS_VISUALS</a>
+        </div>
+
+        <div class="card">
+            <div class="status">PROJECT_TYPE: WEB_INTERFACE</div>
+            <h2>MEDZONE & ARABIC PLATFORM</h2>
+            <p>Custom HTML/CSS architecture for medical and education sectors.</p>
+            <a href="#" class="btn">GO_TO_URL</a>
+        </div>
+
+        <div class="card">
+            <div class="status">PROJECT_TYPE: NEURAL_AUDIO</div>
+            <h2>SUNO REMIX ARCHIVE</h2>
+            <p>20+ AI-generated covers and remixes.</p>
+            <a href="SIZNING_TELEGRAM_LINK" class="btn">LISTEN_AUDIO</a>
+        </div>
+    </div>
+
+</body>
+</html>
